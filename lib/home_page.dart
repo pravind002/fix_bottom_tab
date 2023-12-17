@@ -8,14 +8,16 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: const SizedBox(),
         actions: [
-          IconButton(onPressed: () {
-            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const NotificationPage()));
-          }, icon: const Icon(Icons.notification_add))
+          IconButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const NotificationPage()));
+              },
+              icon: const Icon(Icons.notification_add))
         ],
       ),
       body: const Center(child: Text('Home Page')),

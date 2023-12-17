@@ -5,6 +5,8 @@ class AddPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(child: const Center(child: Text('Add Page')),);
+    return Container(
+      child: const Center(child: Text('Add Page')),
+    );
   }
 }

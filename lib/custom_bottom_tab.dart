@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'Utils.dart';
 
 class CustBottomBar extends StatefulWidget {
@@ -11,18 +10,10 @@ class CustBottomBar extends StatefulWidget {
 }
 
 class _CustBottomBarState extends State<CustBottomBar> {
-  // var menuItem = [
-  //   {"icon": "assets/icons/home.png", "title": "Home"},
-  //   {"icon": "assets/icons/status.png", "title": "Query Status"},
-  //   {"icon": "assets/icons/add.png", "title": "Raise Query"},
-  //   {"icon": "assets/icons/shield.png", "title": "Kavach"},
-  //   {"icon": "assets/icons/check.png", "title": "Validation"}
-  // ];
-
   List menuItem = [
     {"icon": Icons.home, "title": "Home"},
     {"icon": Icons.category, "title": "Category"},
-    {"icon": Icons.add, "title": "Add"},
+    {"icon": Icons.add_circle_outline, "title": "Add"},
     {"icon": Icons.notifications_on, "title": "Notification"},
     {"icon": Icons.person, "title": "Profile"}
   ];
@@ -60,8 +51,10 @@ class _CustBottomBarState extends State<CustBottomBar> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   IconButton(
-                    icon: index != 2
-                        ? Icon(
+                    icon:
+                    //  index != 2
+                    //     ? 
+                        Icon(
                             menuItem[index]['icon'],
                             size: selectedIndex == index ? 35 : 30,
                             color: selectedIndex == index
@@ -73,21 +66,22 @@ class _CustBottomBarState extends State<CustBottomBar> {
                         //   color: selectedIndex == index ? const Color(0xff21619A) : const Color(0xff857B7B),
                         //   size: selectedIndex == index ? 35 : 30,
                         // )
-                        : Container(
-                            height: selectedIndex == index ? 35 : 30,
-                            width: selectedIndex == index ? 35 : 30,
-                            clipBehavior: Clip.none,
-                            decoration: BoxDecoration(
-                                color: selectedIndex == index
-                                    ? const Color(0xff21619A)
-                                    : const Color(0xffFF6854),
-                                borderRadius: BorderRadius.circular(180)),
-                            child: const Icon(
-                              Icons.add,
-                              size: 30,
-                              color: Colors.white,
-                            ),
-                          ),
+                        // : Container(
+                        //     height: selectedIndex == index ? 35 : 30,
+                        //     width: selectedIndex == index ? 35 : 30,
+                        //     clipBehavior: Clip.none,
+                        //     decoration: BoxDecoration(
+                        //         color: selectedIndex == index
+                        //             ? const Color(0xff21619A)
+                        //             : const Color(0xffFF6854),
+                        //         borderRadius: BorderRadius.circular(180)),
+                        //     child: const Icon(
+                        //       Icons.add,
+                        //       size: 30,
+                        //       color: Colors.white,
+                        //     ),
+                        //   ),
+                        ,
                     onPressed: () {
                       setState(() {
                         selectedIndex = index;
@@ -113,10 +107,7 @@ class _CustBottomBarState extends State<CustBottomBar> {
                         case 4:
                           Utils.mainListNav.currentState!.pushNamed('/profile');
                           break;
-                        // case 5:
-                        //   Utils.mainListNav.currentState!
-                        //       .pushNamed('/Validation');
-                        //   break;
+                
                       }
                     },
                   ),
